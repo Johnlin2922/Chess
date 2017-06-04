@@ -8,13 +8,16 @@ plugins {
 }
 apply plugin: 'java'
 apply plugin: 'jacoco'
+apply plugin: 'application'
+
+mainClassName = 'johnnyLin.is.awesome.Main'
 
 version = '1.0'
 jar {
     manifest {
         attributes 'Implementation-Title': 'Chess', 
                    'Implementation-Version': '0.0.1', 
-                   'Main-Class': 'johnnyLin.is.awesome.HelloWorld'
+                   'Main-Class': 'johnnyLin.is.awesome.Main'
     }
 }
 
