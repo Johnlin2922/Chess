@@ -10,6 +10,7 @@ public class Chess{
 		board = new Square[8][8];
 		
 		
+		
 		pieces[0] = new Piece('a', 2, Piece.Type.PAWN);
 		pieces[1] = new Piece('b', 2, Piece.Type.PAWN);
 		pieces[2] = new Piece('c', 2, Piece.Type.PAWN);
@@ -50,6 +51,26 @@ public class Chess{
 			}
 			if(i != 0){
 				rep += "\n";
+			}
+		}
+		
+		return rep; 
+	}
+	
+	public String toString(char c){
+		String rep = "-----------------\n";
+		for(int i = 7; i > -1; i--){
+			rep += "|";
+			for(int j = 0; j < 8; j++){
+				rep += Character.toString(board[i][j].toChar());
+				rep += "|";
+			}
+			rep += "\n";
+			if(i == 0){
+				rep += "-----------------";
+			}
+			else{
+				rep += "-----------------\n";
 			}
 		}
 		

@@ -38,4 +38,25 @@ public class Square{
 	public Piece.Type getType(){
 		return type; 
 	}
+	
+	public char toChar(){
+		switch (type){
+			case KING:
+				return 'K'; 
+			case QUEEN:
+				return 'Q';
+			case ROOK:
+				return 'R';
+			case BISHOP:
+				return 'B';
+			case KNIGHT:
+				return 'N';
+			case PAWN:
+				return 'P';
+			case NONE:
+				return ' ';
+			default:
+				return 'j';    
+		}
+	}
 }
